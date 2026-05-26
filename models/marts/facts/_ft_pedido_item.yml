@@ -1,0 +1,31 @@
+
+models:
+  - name: fct_pedido_item
+    description: Fato contendo os itens dos pedidos de venda e métricas financeiras associadas.
+    columns:
+      - name: fk_cliente_id
+        description: Identificador do cliente associado ao pedido.
+        data_tests:
+          - not_null
+      - name: fk_territorio_id
+        description: Identificador do território de vendas associado ao pedido.
+      - name: fk_produto_id
+        description: Identificador do produto vendido.
+        data_tests:
+          - not_null
+      - name: quantidade_pedida
+        description: Quantidade de itens solicitados no pedido.
+      - name: preco_unitario
+        description: Valor unitário do produto vendido.
+      - name: desconto_preco_unitario
+        description: Percentual de desconto aplicado ao item.
+      - name: valor_bruto
+        description: Valor bruto calculado sem aplicação de descontos.
+      - name: valor_liquido
+        description: Valor líquido calculado após aplicação de descontos.
+      - name: valor_frete
+        description: Valor do frete associado ao pedido.
+      - name: valor_imposto
+        description: Valor de impostos associados ao pedido.
+      - name: data_modificacao
+        description: Data da última modificação do registro.

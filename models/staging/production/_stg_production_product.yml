@@ -1,0 +1,28 @@
+sources:
+  - name: production
+    description: Esse schema armazena os dados transacionais relacionados aos produtos, categorias, subcategorias e estruturas produtivas do Adventure Works.
+    catalog: fea_academy
+    schema: adventure_works
+
+    tables:
+      - name: production_product
+        description: Tabela fonte contendo os produtos comercializados pela empresa.
+        columns:
+          - name: productid
+            description: Identificador único do produto.
+          - name: listprice
+            description: Preço de lista do produto.
+          - name: name
+            description: Nome do produto.
+          - name: size
+            description: Tamanho do produto.
+          - name: weight
+            description: Peso do produto.
+          - name: daystomanufacture
+            description: Quantidade de dias necessários para fabricação do produto.
+          - name: productsubcategoryid
+            description: Identificador da subcategoria do produto.
+          - name: sellstartdate
+            description: Data de início da comercialização do produto.
+          - name: modifieddate
+            description: Data da última modificação do registro.

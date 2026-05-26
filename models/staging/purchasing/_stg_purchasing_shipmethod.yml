@@ -1,0 +1,23 @@
+sources:
+  - name: purchasing
+    description: Esse schema armazena os dados transacionais das compras efetuadas no Adventure Works.
+    catalog: fea_academy
+    schema: adventure_works
+
+    tables:
+      - name: purchasing_shipmethod
+        description: Tabela fonte com os métodos de envio utilizados nos processos logísticos de compras e abastecimento.
+        columns:
+          - name: shipmethodid
+            description: Identificador único do método de envio.
+            data_tests:
+              - unique
+              - not_null
+          - name: name
+            description: Nome do método de envio.
+          - name: shipbase
+            description: Valor base do frete.
+          - name: shiprate
+            description: Taxa adicional aplicada ao envio.
+          - name: modifieddate
+            description: Data da última modificação do registro.

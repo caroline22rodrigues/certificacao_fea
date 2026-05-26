@@ -1,0 +1,22 @@
+sources:
+  - name: person
+    description: Esse schema armazena os dados cadastrais de pessoas, clientes, endereços e informações de contato da Adventure Works.
+    catalog: fea_academy
+    schema: adventure_works
+    
+    tables:
+      - name: person_stateprovince
+        description: Tabela fonte com os estados e províncias utilizados nos endereços cadastrados.
+        columns:
+          - name: stateprovinceid
+            description: Identificador único do estado ou província.
+          - name: stateprovincecode
+            description: Código do estado ou província.
+          - name: countryregioncode
+            description: Código do país ou região associado.
+          - name: name
+            description: Nome do estado ou província.
+          - name: territoryid
+            description: Identificador do território associado.
+          - name: modifieddate
+            description: Data da última modificação do registro.

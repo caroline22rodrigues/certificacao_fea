@@ -1,0 +1,13 @@
+
+models:
+  - name: brg_motivo_venda
+    description: Bridge table responsável pelo relacionamento entre pedidos de venda e motivos de venda.
+    columns:
+      - name: pk_pedido_id
+        description: Identificador único do pedido de venda.
+      - name: fk_motivo_venda_id
+        description: Identificador do motivo associado ao pedido.
+      - name: nome_motivo_venda
+        description: Nome do motivo associado à venda.
+      - name: tipo_motivo_venda
+        description: Categoria do motivo da venda.

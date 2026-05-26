@@ -1,0 +1,145 @@
+
+models:
+  - name: int_brg_motivo_venda
+    description: Bridge table responsável pelo relacionamento entre pedidos de venda e motivos de venda.
+    columns:
+      - name: pk_pedido_id
+        description: Identificador único do pedido de venda.
+      - name: fk_motivo_venda_id
+        description: Identificador do motivo associado ao pedido.
+      - name: nome_motivo_venda
+        description: Nome do motivo associado à venda.
+      - name: tipo_motivo_venda
+        description: Categoria do motivo da venda.
+
+  - name: int_dim_cliente
+    description: Dimensão contendo os dados cadastrais dos clientes da Adventure Works.
+    columns:
+      - name: pk_cliente_id
+        description: Identificador único do cliente.
+      - name: nome_completo
+        description: Nome completo da pessoa associada ao cliente.
+      - name: tipo_pessoa
+        description: Tipo da entidade cadastrada no sistema.
+      - name: promocao_email
+        description: Indicador de participação em campanhas promocionais por e-mail.
+
+  - name: int_dim_endereco
+    description: Dimensão contendo informações geográficas e de endereçamento.
+    columns:
+      - name: pk_endereco_id
+        description: Identificador único do endereço.
+      - name: endereco_linha_1
+        description: Primeira linha do endereço.
+      - name: cidade
+        description: Nome da cidade do endereço.
+      - name: codigo_postal
+        description: Código postal do endereço.
+      - name: nome_estado_provincia
+        description: Nome do estado ou província.
+      - name: codigo_estado_provincia
+        description: Código do estado ou província.
+      - name: nome_pais_regiao
+        description: Nome do país ou região.
+      - name: codigo_pais_regiao
+        description: Código do país ou região.
+
+  - name: int_dim_fornecedor
+    description: Dimensão contendo os dados cadastrais e comerciais dos fornecedores.
+    columns:
+      - name: pk_fornecedor_id
+        description: Identificador único do fornecedor.
+      - name: nome_fornecedor
+        description: Nome do fornecedor.
+      - name: ativo
+        description: Indicador de fornecedor ativo.
+
+  - name: int_dim_motivo_venda
+    description: Dimensão contendo os motivos associados às vendas realizadas.
+    columns:
+      - name: pk_motivo_venda_id
+        description: Identificador único do motivo da venda.
+      - name: nome_motivo_venda
+        description: Nome do motivo da venda.
+      - name: tipo_motivo_venda
+        description: Categoria do motivo da venda.
+      - name: data_modificacao
+        description: Data da última modificação do registro.
+
+  - name: int_dim_pagamento
+    description: Dimensão contendo os meios de pagamento utilizados nas vendas.
+    columns:
+      - name: pk_pagamento_id
+        description: Identificador único do pagamento.
+      - name: tipo_pagamento
+        description: Tipo do meio de pagamento utilizado.
+      - name: tipo_cartao
+        description: Bandeira ou categoria do cartão de crédito.
+      - name: mes_expiracao
+        description: Mês de expiração do cartão.
+      - name: ano_expiracao
+        description: Ano de expiração do cartão.
+      - name: ano_mes_expiracao
+        description: Ano e mês concatenados da expiração do cartão.
+      - name: data_modificacao
+        description: Data da última modificação do registro.
+
+  - name: int_dim_produto
+    description: Dimensão contendo os atributos e classificações dos produtos.
+    columns:
+      - name: pk_produto_id
+        description: Identificador único do produto.
+      - name: nome_produto
+        description: Nome do produto.
+      - name: preco_lista
+        description: Preço de lista do produto.
+      - name: tamanho_produto
+        description: Tamanho do produto.
+      - name: peso_produto
+        description: Peso do produto.
+      - name: dias_para_fabricacao
+        description: Quantidade de dias necessários para fabricação do produto.
+      - name: data_inicio_venda
+        description: Data de início da comercialização do produto.
+      - name: nome_subcategoria_produto
+        description: Nome da subcategoria do produto.
+      - name: nome_categoria_produto
+        description: Nome da categoria principal do produto.
+
+  - name: int_dim_status_pedido
+    description: Dimensão contendo os possíveis status dos pedidos de venda.
+    columns:
+      - name: pk_status_pedido_id
+        description: Identificador único do status do pedido.
+      - name: nome_status_pedido
+        description: Descrição textual do status do pedido.
+
+  - name: int_ft_pedido_item
+    description: Fato contendo os itens dos pedidos de venda e métricas financeiras associadas.
+    columns:
+      - name: pk_pedido_id
+        description: Identificador único do pedido de venda.
+      - name: pk_pedido_item_id
+        description: Identificador único do item do pedido.
+      - name: fk_cliente_id
+        description: Identificador do cliente associado ao pedido.
+      - name: fk_territorio_id
+        description: Identificador do território de vendas.
+      - name: fk_produto_id
+        description: Identificador do produto vendido.
+      - name: quantidade_pedida
+        description: Quantidade de itens solicitados no pedido.
+      - name: preco_unitario
+        description: Valor unitário do produto vendido.
+      - name: desconto_preco_unitario
+        description: Percentual de desconto aplicado ao item.
+      - name: valor_bruto
+        description: Valor bruto calculado sem desconto.
+      - name: valor_liquido
+        description: Valor líquido calculado após desconto.
+      - name: valor_frete
+        description: Valor do frete associado ao pedido.
+      - name: valor_imposto
+        description: Valor de impostos associados ao pedido.
+      - name: data_modificacao
+        description: Data da última modificação do registro.

@@ -1,0 +1,31 @@
+sources:
+  - name: purchasing
+    description: Esse schema armazena os dados transacionais das compras efetuadas no Adventure Works.
+    catalog: fea_academy
+    schema: adventure_works
+
+    tables:
+      - name: purchasing_purchaseorderdetail
+        description: Tabela fonte com os itens dos pedidos de compra, contendo os produtos adquiridos, quantidades, preços unitários e métricas relacionadas ao processo de abastecimento.
+        columns:
+          - name: purchaseorderid
+            description: Identificador do pedido de compra.
+          - name: purchaseorderdetailid
+            description: Identificador único do item do pedido de compra.
+            data_tests:
+              - unique
+              - not_null
+          - name: duedate
+            description: Data prevista para entrega do item.
+          - name: orderqty
+            description: Quantidade solicitada no pedido.
+          - name: productid
+            description: Identificador do produto adquirido.
+          - name: unitprice
+            description: Valor unitário do item comprado.
+          - name: receivedqty
+            description: Quantidade efetivamente recebida.
+          - name: rejectedqty
+            description: Quantidade rejeitada no recebimento.
+          - name: modifieddate
+            description: Data da última modificação do registro.

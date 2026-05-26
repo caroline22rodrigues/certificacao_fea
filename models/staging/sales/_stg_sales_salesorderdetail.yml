@@ -1,0 +1,28 @@
+sources:
+  - name: sales
+    description: Esse schema armazena os dados transacionais relacionados às vendas, clientes, pedidos comerciais e territórios de venda do Adventure Works.
+    catalog: fea_academy
+    schema: adventure_works
+
+    tables:
+      - name: sales_salesorderdetail
+        description: Tabela fonte com os itens dos pedidos de venda, contendo os produtos comercializados, quantidades, preços unitários e descontos aplicados.
+        columns:
+          - name: salesorderid
+            description: Identificador do pedido de venda.
+          - name: salesorderdetailid
+            description: Identificador único do item do pedido.
+          - name: carriertrackingnumber
+            description: Código de rastreio da transportadora.
+          - name: orderqty
+            description: Quantidade solicitada do produto.
+          - name: productid
+            description: Identificador do produto vendido.
+          - name: specialofferid
+            description: Identificador da oferta especial aplicada.
+          - name: unitprice
+            description: Valor unitário do produto vendido.
+          - name: unitpricediscount
+            description: Percentual de desconto aplicado ao item.
+          - name: modifieddate
+            description: Data da última modificação do registro.

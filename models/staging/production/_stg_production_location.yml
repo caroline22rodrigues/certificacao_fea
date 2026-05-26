@@ -1,0 +1,20 @@
+sources:
+  - name: production
+    description: Esse schema armazena os dados transacionais relacionados aos produtos, categorias, subcategorias e estruturas produtivas do Adventure Works.
+    catalog: fea_academy
+    schema: adventure_works
+
+    tables:
+      - name: production_location
+        description: Tabela fonte contendo os locais de armazenamento e operação da empresa.
+        columns:
+          - name: locationid
+            description: Identificador único da localização.
+          - name: name
+            description: Nome da localização.
+          - name: costrate
+            description: Taxa de custo associada à localização.
+          - name: availability
+            description: Disponibilidade operacional da localização.
+          - name: modifieddate
+            description: Data da última modificação do registro.

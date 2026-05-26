@@ -1,0 +1,18 @@
+sources:
+  - name: sales
+    description: Esse schema armazena os dados transacionais relacionados às vendas, clientes, pedidos comerciais e territórios de venda do Adventure Works.
+    catalog: fea_academy
+    schema: adventure_works
+
+    tables:
+      - name: sales_store
+        description: Tabela fonte com as lojas e clientes corporativos associados às operações comerciais da empresa.
+        columns:
+          - name: businessentityid
+            description: Identificador único da entidade de negócio.
+          - name: name
+            description: Nome da loja.
+          - name: salespersonid
+            description: Identificador do vendedor responsável pela loja.
+          - name: modifieddate
+            description: Data da última modificação do registro.
