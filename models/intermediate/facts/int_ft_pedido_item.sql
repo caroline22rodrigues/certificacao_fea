@@ -17,6 +17,7 @@ select
     , pedido.fk_cliente_id
     , pedido.fk_territorio_id
     , item.fk_produto_id
+    , pedido.data_pedido
     , item.quantidade_pedida
     , item.preco_unitario
     , item.desconto_preco_unitario
@@ -27,4 +28,7 @@ select
     , pedido.data_modificacao
 from item
 left join pedido on item.pk_pedido_id = pedido.pk_pedido_id
-left join tempo on tempo.data = cast(pedido.data_pedido as date)
+left join tempo on tempo.data = pedido.data_pedido
+
+
+
