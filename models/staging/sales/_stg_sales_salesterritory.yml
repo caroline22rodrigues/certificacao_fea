@@ -1,0 +1,28 @@
+sources:
+  - name: sales
+    description: Esse schema armazena os dados transacionais relacionados às vendas, clientes, pedidos comerciais e territórios de venda do Adventure Works.
+    catalog: fea_academy
+    schema: adventure_works
+
+    tables:
+      - name: sales_salesterritory
+        description: Tabela fonte com os territórios de venda utilizados para segmentação geográfica e análises regionais de desempenho comercial.
+        columns:
+          - name: territoryid
+            description: Identificador único do território de vendas.
+          - name: name
+            description: Nome do território.
+          - name: countryregioncode
+            description: Código do país ou região associado ao território.
+          - name: group
+            description: Grupo geográfico do território.
+          - name: salesytd
+            description: Valor acumulado de vendas no ano atual.
+          - name: saleslastyear
+            description: Valor acumulado de vendas no ano anterior.
+          - name: costytd
+            description: Valor acumulado de custos no ano atual.
+          - name: costlastyear
+            description: Valor acumulado de custos no ano anterior.
+          - name: modifieddate
+            description: Data da última modificação do registro.

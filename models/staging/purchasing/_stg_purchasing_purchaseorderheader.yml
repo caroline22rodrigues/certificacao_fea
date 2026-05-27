@@ -1,0 +1,37 @@
+sources:
+  - name: purchasing
+    description: Esse schema armazena os dados transacionais das compras efetuadas no Adventure Works.
+    catalog: fea_academy
+    schema: adventure_works
+
+    tables:
+      - name: purchasing_purchaseorderheader
+        description: Tabela fonte com os dados de cabeçalho dos pedidos de compra, contendo informações gerais da transação como fornecedor, datas, status, impostos, frete e valores totais.
+        columns:
+          - name: purchaseorderid
+            description: Identificador único do pedido de compra.
+            data_tests:
+              - unique
+              - not_null
+          - name: revisionnumber
+            description: Número de revisão do pedido de compra.
+          - name: status
+            description: Código de status do pedido de compra.
+          - name: employeeid
+            description: Identificador do funcionário responsável pela compra.
+          - name: vendorid
+            description: Identificador do fornecedor associado ao pedido.
+          - name: shipmethodid
+            description: Identificador do método de envio utilizado.
+          - name: orderdate
+            description: Data de realização do pedido.
+          - name: shipdate
+            description: Data de envio do pedido.
+          - name: subtotal
+            description: Valor subtotal dos itens do pedido.
+          - name: taxamt
+            description: Valor de impostos aplicados ao pedido.
+          - name: freight
+            description: Valor do frete do pedido.
+          - name: modifieddate
+            description: Data da última modificação do registro.

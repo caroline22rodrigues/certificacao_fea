@@ -1,0 +1,26 @@
+sources:
+  - name: person
+    description: Esse schema armazena os dados cadastrais de pessoas, clientes, endereços e informações de contato da Adventure Works.
+    catalog: fea_academy
+    schema: adventure_works
+    
+    tables:
+      - name: person_person
+        description: Tabela fonte com os dados cadastrais das pessoas físicas relacionadas à Adventure Works, incluindo clientes, funcionários e contatos comerciais.
+        columns:
+          - name: businessentityid
+            description: Identificador único da entidade de negócio.
+          - name: persontype
+            description: Tipo da pessoa cadastrada.
+          - name: namestyle
+            description: Indicador do formato de exibição do nome.
+          - name: firstname
+            description: Primeiro nome da pessoa.
+          - name: middlename
+            description: Nome do meio da pessoa.
+          - name: lastname
+            description: Sobrenome da pessoa.
+          - name: emailpromotion
+            description: Indicador de participação em promoções via e-mail.
+          - name: modifieddate
+            description: Data da última modificação do registro.

@@ -1,0 +1,23 @@
+
+models:
+  - name: int_dim_produto
+    description: Tabela intermediaria contendo os atributos e classificações dos produtos.
+    columns:
+      - name: pk_produto_id
+        description: Identificador único do produto.
+      - name: nome_produto
+        description: Nome do produto.
+      - name: preco_lista
+        description: Preço de lista do produto.
+      - name: tamanho_produto
+        description: Tamanho do produto.
+      - name: peso_produto
+        description: Peso do produto.
+      - name: dias_para_fabricacao
+        description: Quantidade de dias necessários para fabricação do produto.
+      - name: data_inicio_venda
+        description: Data de início da comercialização do produto.
+      - name: nome_subcategoria_produto
+        description: Nome da subcategoria do produto.
+      - name: nome_categoria_produto
+        description: Nome da categoria principal do produto.

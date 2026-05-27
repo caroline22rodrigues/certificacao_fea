@@ -1,0 +1,18 @@
+sources:
+  - name: sales
+    description: Esse schema armazena os dados transacionais relacionados às vendas, clientes, pedidos comerciais e territórios de venda do Adventure Works.
+    catalog: fea_academy
+    schema: adventure_works
+
+    tables:
+      - name: sales_salesreason
+        description: Tabela fonte que guarda as informações dos motivos das vendas.
+        columns:
+          - name: salesreasonid
+            description: Identificador único do motivo da venda.
+          - name: name
+            description: Nome do motivo da venda.
+          - name: reasontype
+            description: Categoria do motivo da venda.
+          - name: modifieddate
+            description: Data da última modificação do registro.

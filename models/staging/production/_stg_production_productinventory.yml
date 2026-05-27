@@ -1,0 +1,26 @@
+sources:
+  - name: production
+    description: Esse schema armazena os dados transacionais relacionados aos produtos, categorias, subcategorias e estruturas produtivas do Adventure Works.
+    catalog: fea_academy
+    schema: adventure_works
+
+    tables:
+      - name: production_productinventory
+        description: Tabela fonte contendo o estoque disponível dos produtos por localização.
+        columns:
+          - name: productid
+            description: Identificador único do produto.
+            data_tests:
+              - not_null
+          - name: locationid
+            description: Identificador da localização do estoque.
+            data_tests:
+              - not_null
+          - name: shelf
+            description: Código da prateleira onde o produto está armazenado.
+          - name: bin
+            description: Compartimento do estoque.
+          - name: quantity
+            description: Quantidade disponível em estoque.
+          - name: modifieddate
+            description: Data da última modificação do registro.

@@ -1,0 +1,32 @@
+sources:
+  - name: purchasing
+    description: Esse schema armazena os dados transacionais das compras efetuadas no Adventure Works.
+    catalog: fea_academy
+    schema: adventure_works
+
+    tables:
+      - name: purchasing_productvendor
+        description: Tabela fonte com a relação entre produtos e fornecedores, permitindo identificar quais fornecedores abastecem cada produto, incluindo informações de custo, lead time e quantidade mínima de compra.
+        columns:
+          - name: productid
+            description: Identificador do produto.
+          - name: businessentityid
+            description: Identificador do fornecedor.
+          - name: averageleadtime
+            description: Prazo médio de entrega do fornecedor em dias.
+          - name: standardprice
+            description: Preço padrão negociado com o fornecedor.
+          - name: lastreceiptcost
+            description: Custo do último recebimento do produto.
+          - name: lastreceiptdate
+            description: Data do último recebimento do produto.
+          - name: minorderqty
+            description: Quantidade mínima permitida por pedido.
+          - name: maxorderqty
+            description: Quantidade máxima permitida por pedido.
+          - name: onorderqty
+            description: Quantidade atualmente em pedido.
+          - name: unitmeasurecode
+            description: Código da unidade de medida utilizada.
+          - name: modifieddate
+            description: Data da última modificação do registro.

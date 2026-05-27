@@ -1,0 +1,13 @@
+
+models:
+  - name: dim_cliente
+    description: Dimensão contendo os dados cadastrais dos clientes da Adventure Works.
+    columns:
+      - name: pk_cliente_id
+        description: Identificador único do cliente.
+      - name: nome_completo
+        description: Nome completo da pessoa associada ao cliente.
+      - name: tipo_pessoa
+        description: Tipo da entidade cadastrada no sistema.
+      - name: promocao_email
+        description: Indicador de participação em campanhas promocionais por e-mail.

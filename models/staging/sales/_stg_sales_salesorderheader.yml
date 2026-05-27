@@ -1,0 +1,38 @@
+sources:
+  - name: sales
+    description: Esse schema armazena os dados transacionais relacionados às vendas, clientes, pedidos comerciais e territórios de venda do Adventure Works.
+    catalog: fea_academy
+    schema: adventure_works
+
+    tables:
+      - name: sales_salesorderheader
+        description: Tabela fonte com os dados de cabeçalho dos pedidos de venda, contendo informações gerais da transação como cliente, datas, impostos, frete, território e valores totais.
+        columns:
+          - name: salesorderid
+            description: Identificador único do pedido de venda.
+          - name: customerid
+            description: Identificador do cliente associado ao pedido.
+          - name: salespersonid
+            description: Identificador do vendedor responsável pela venda.
+          - name: territoryid
+            description: Identificador do território de vendas.
+          - name: billtoaddressid
+            description: Identificador do endereço de cobrança.
+          - name: shiptoaddressid
+            description: Identificador do endereço de entrega.
+          - name: shipmethodid
+            description: Identificador do método de envio utilizado.
+          - name: creditcardid
+            description: Identificador do cartão de crédito utilizado no pagamento.
+          - name: status
+            description: Código de status do pedido de venda.
+          - name: subtotal
+            description: Valor subtotal dos produtos do pedido.
+          - name: taxamt
+            description: Valor de impostos aplicados ao pedido.
+          - name: freight
+            description: Valor do frete do pedido.
+          - name: totaldue
+            description: Valor total do pedido incluindo impostos e frete.
+          - name: modifieddate
+            description: Data da última modificação do registro.

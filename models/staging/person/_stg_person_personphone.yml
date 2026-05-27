@@ -1,0 +1,16 @@
+sources:
+  - name: person
+    description: Esse schema armazena os dados cadastrais de pessoas, clientes, endereços e informações de contato da Adventure Works.
+    catalog: fea_academy
+    schema: adventure_works
+    
+    tables:
+      - name: person_personphone
+        description: Tabela fonte com os telefones associados às pessoas cadastradas.
+        columns:
+          - name: businessentityid
+            description: Identificador da entidade de negócio associada ao telefone.
+          - name: phonenumber
+            description: Número de telefone cadastrado.
+          - name: modifieddate
+            description: Data da última modificação do registro.

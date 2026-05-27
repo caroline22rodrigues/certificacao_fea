@@ -1,0 +1,8 @@
+models:
+  - name: int_dim_status_pedido
+    description: Tabela intermediaria contendo os possíveis status dos pedidos de venda.
+    columns:
+      - name: pk_status_pedido_id
+        description: Identificador único do status do pedido.
+      - name: nome_status_pedido
+        description: Descrição textual do status do pedido.
