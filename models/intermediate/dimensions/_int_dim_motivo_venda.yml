@@ -1,0 +1,13 @@
+
+models:
+  - name: int_dim_motivo_venda
+    description: Tabela intermediaria contendo os motivos associados às vendas realizadas.
+    columns:
+      - name: pk_motivo_venda_id
+        description: Identificador único do motivo da venda.
+      - name: nome_motivo_venda
+        description: Nome do motivo da venda.
+      - name: tipo_motivo_venda
+        description: Categoria do motivo da venda.
+      - name: data_modificacao
+        description: Data da última modificação do registro.

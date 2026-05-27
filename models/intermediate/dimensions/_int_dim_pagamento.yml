@@ -1,0 +1,19 @@
+
+models:
+  - name: int_dim_pagamento
+    description: Tabela intermediaria contendo os meios de pagamento utilizados nas vendas.
+    columns:
+      - name: pk_pagamento_id
+        description: Identificador único do pagamento.
+      - name: tipo_pagamento
+        description: Tipo do meio de pagamento utilizado.
+      - name: tipo_cartao
+        description: Bandeira ou categoria do cartão de crédito.
+      - name: mes_expiracao
+        description: Mês de expiração do cartão.
+      - name: ano_expiracao
+        description: Ano de expiração do cartão.
+      - name: ano_mes_expiracao
+        description: Ano e mês concatenados da expiração do cartão.
+      - name: data_modificacao
+        description: Data da última modificação do registro.

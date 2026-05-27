@@ -1,0 +1,20 @@
+models:
+  - name: int_dim_endereco
+    description: Tabela intermediaria contendo informações geográficas e de endereçamento.
+    columns:
+      - name: pk_endereco_id
+        description: Identificador único do endereço.
+      - name: endereco_linha_1
+        description: Primeira linha do endereço.
+      - name: cidade
+        description: Nome da cidade do endereço.
+      - name: codigo_postal
+        description: Código postal do endereço.
+      - name: nome_estado_provincia
+        description: Nome do estado ou província.
+      - name: codigo_estado_provincia
+        description: Código do estado ou província.
+      - name: nome_pais_regiao
+        description: Nome do país ou região.
+      - name: codigo_pais_regiao
+        description: Código do país ou região.

@@ -1,0 +1,19 @@
+
+models:
+  - name: dim_tempo
+    description: Dimensão contendo as datas de 2000 até 2026
+    columns:
+      - name: pk_data
+        description: Identificador único da data.
+      - name: data
+        description: Data no formato dd-mm-aaaa.
+      - name: dia
+        description: Exibe o dia.
+      - name: mes
+        description: Exibe o mês.
+      - name: ano
+        description: Exibe o ano.
+      - name: dia_da_semana
+        description: Exibe o número relacionado ao dia da semana.
+      - name: is_final_de_semana
+        description: Exibe true quandop for final de semana e false quando não for. 
