@@ -5,8 +5,13 @@ models:
     columns:
       - name: pk_pedido_id
         description: Identificador único do pedido de venda.
+        data_tests:
+              - not_null
       - name: pk_pedido_item_id
         description: Identificador único do item do pedido.
+        data_tests:
+              - unique
+              - not_null
       - name: fk_cliente_id
         description: Identificador do cliente associado ao pedido.
       - name: fk_territorio_id

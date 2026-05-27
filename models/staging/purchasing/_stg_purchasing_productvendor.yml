@@ -10,7 +10,11 @@ sources:
         columns:
           - name: productid
             description: Identificador do produto.
+            data_tests:
+              - not_null
           - name: businessentityid
+            data_tests:
+              - not_null
             description: Identificador do fornecedor.
           - name: averageleadtime
             description: Prazo médio de entrega do fornecedor em dias.

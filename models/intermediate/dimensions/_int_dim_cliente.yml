@@ -5,6 +5,9 @@ models:
       columns:
         - name: pk_cliente_id
           description: Identificador único do cliente.
+          data_tests:
+              - unique
+              - not_null
         - name: nome_completo
           description: Nome completo da pessoa associada ao cliente.
         - name: tipo_pessoa

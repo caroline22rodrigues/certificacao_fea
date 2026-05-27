@@ -11,6 +11,9 @@ sources:
         columns:
           - name: creditcardid
             description: Identificador único do cartão de crédito.
+            data_tests:
+              - unique
+              - not_null
           - name: cardtype
             description: Tipo ou bandeira do cartão.
           - name: expmonth

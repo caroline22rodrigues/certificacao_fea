@@ -6,9 +6,14 @@ with pedido as (
     select *
     from {{ ref('stg_sales_salesorderdetail') }}
 )
+, tempo as (
+    select *
+    from {{ ref('int_dim_tempo') }}
+)
 select
     item.pk_pedido_id
     , item.pk_pedido_item_id
+    , tempo.pk_data as pk_data_pedido
     , pedido.fk_cliente_id
     , pedido.fk_territorio_id
     , item.fk_produto_id
@@ -22,3 +27,4 @@ select
     , pedido.data_modificacao
 from item
 left join pedido on item.pk_pedido_id = pedido.pk_pedido_id
+left join tempo on tempo.data = cast(pedido.data_pedido as date)

@@ -10,7 +10,11 @@ sources:
         columns:
           - name: salesorderid
             description: Identificador do pedido de venda.
+            data_tests:
+              - not_null
           - name: salesreasonid
             description: Identificador do motivo de venda associado ao pedido.
+            data_tests:
+              - not_null
           - name: modifieddate
             description: Data da última modificação do registro.

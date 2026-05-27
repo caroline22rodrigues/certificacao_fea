@@ -5,6 +5,9 @@ models:
     columns:
       - name: pk_produto_id
         description: Identificador único do produto.
+        data_tests:
+              - unique
+              - not_null
       - name: nome_produto
         description: Nome do produto.
       - name: preco_lista

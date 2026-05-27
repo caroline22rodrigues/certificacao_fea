@@ -4,8 +4,12 @@ models:
     columns:
       - name: pk_pedido_id
         description: Identificador único do pedido de venda.
+        data_tests:
+              - not_null
       - name: fk_motivo_venda_id
         description: Identificador do motivo associado ao pedido.
+        data_tests:
+              - not_null
       - name: nome_motivo_venda
         description: Nome do motivo associado à venda.
       - name: tipo_motivo_venda

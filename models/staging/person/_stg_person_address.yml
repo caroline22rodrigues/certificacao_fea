@@ -10,6 +10,9 @@ sources:
         columns:
           - name: addressid
             description: Identificador único do endereço.
+            data_tests:
+              - unique
+              - not_null
           - name: addressline1
             description: Primeira linha do endereço.
           - name: city

@@ -4,6 +4,9 @@ models:
     columns:
       - name: pk_fornecedor_id
         description: Identificador único do fornecedor.
+        data_tests:
+              - unique
+              - not_null
       - name: nome_fornecedor
         description: Nome do fornecedor.
       - name: ativo

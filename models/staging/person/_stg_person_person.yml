@@ -10,6 +10,9 @@ sources:
         columns:
           - name: businessentityid
             description: Identificador único da entidade de negócio.
+            data_tests:
+              - unique
+              - not_null
           - name: persontype
             description: Tipo da pessoa cadastrada.
           - name: namestyle

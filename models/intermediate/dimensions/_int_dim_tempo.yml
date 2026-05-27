@@ -5,6 +5,9 @@ models:
     columns:
       - name: pk_data
         description: Identificador único da data.
+        data_tests:
+              - unique
+              - not_null
       - name: data
         description: Data no formato dd-mm-aaaa.
       - name: dia

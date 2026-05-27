@@ -10,6 +10,9 @@ sources:
         columns:
           - name: stateprovinceid
             description: Identificador único do estado ou província.
+            data_tests:
+              - unique
+              - not_null
           - name: stateprovincecode
             description: Código do estado ou província.
           - name: countryregioncode

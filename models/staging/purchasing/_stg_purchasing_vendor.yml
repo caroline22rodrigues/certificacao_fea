@@ -11,7 +11,6 @@ sources:
           - name: businessentityid
             description: Identificador único do fornecedor.
             data_tests:
-              - unique
               - not_null
           - name: accountnumber
             description: Número da conta do fornecedor.

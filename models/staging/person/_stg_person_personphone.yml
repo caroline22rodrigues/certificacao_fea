@@ -10,6 +10,9 @@ sources:
         columns:
           - name: businessentityid
             description: Identificador da entidade de negócio associada ao telefone.
+            data_tests:
+              - unique
+              - not_null
           - name: phonenumber
             description: Número de telefone cadastrado.
           - name: modifieddate

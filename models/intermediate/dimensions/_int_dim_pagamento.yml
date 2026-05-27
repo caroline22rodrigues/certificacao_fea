@@ -5,6 +5,9 @@ models:
     columns:
       - name: pk_pagamento_id
         description: Identificador único do pagamento.
+        data_tests:
+              - unique
+              - not_null
       - name: tipo_pagamento
         description: Tipo do meio de pagamento utilizado.
       - name: tipo_cartao

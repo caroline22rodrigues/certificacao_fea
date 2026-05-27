@@ -5,6 +5,9 @@ models:
     columns:
       - name: pk_motivo_venda_id
         description: Identificador único do motivo da venda.
+        data_tests:
+              - unique
+              - not_null
       - name: nome_motivo_venda
         description: Nome do motivo da venda.
       - name: tipo_motivo_venda

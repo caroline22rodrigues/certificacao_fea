@@ -10,6 +10,8 @@ sources:
         columns:
           - name: currencycode
             description: Código identificador da moeda.
+            data_tests:
+              - not_null
           - name: name
             description: Nome da moeda.
           - name: modifieddate
