@@ -20,3 +20,5 @@ models:
         description: Exibe o número relacionado ao dia da semana.
       - name: is_final_de_semana
         description: Exibe true quandop for final de semana e false quando não for. 
+      - name: data_escrita_elt
+        description: Data de controle para auditoria, indica o momento em que a linha foi gerada na tabela.

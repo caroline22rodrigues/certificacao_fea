@@ -14,3 +14,5 @@ models:
           description: Tipo da entidade cadastrada no sistema.
         - name: promocao_email
           description: Indicador de participação em campanhas promocionais por e-mail. 
+        - name: data_escrita_elt
+          description: Data de controle para auditoria, indica o momento em que a linha foi gerada na tabela.

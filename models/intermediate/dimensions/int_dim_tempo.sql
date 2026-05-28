@@ -19,4 +19,5 @@ select
         when extract(dow from date_day) in (0,6) then true
         else false
     end as is_final_de_semana
+    , current_timestamp() as data_escrita_elt
 from date

@@ -11,3 +11,5 @@ models:
         description: Nome do fornecedor.
       - name: ativo
         description: Indicador de fornecedor ativo.
+      - name: data_escrita_elt
+        description: Data de controle para auditoria, indica o momento em que a linha foi gerada na tabela.

@@ -20,3 +20,5 @@ models:
         description: Ano e mês concatenados da expiração do cartão.
       - name: data_modificacao
         description: Data da última modificação do registro.
+      - name: data_escrita_elt
+        description: Data de controle para auditoria, indica o momento em que a linha foi gerada na tabela.

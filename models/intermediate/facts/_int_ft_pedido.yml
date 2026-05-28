@@ -1,0 +1,41 @@
+
+models:
+  - name: int_ft_pedido
+    description: Fato contendo informações consolidadas dos pedidos de venda no nível do pedido.
+    columns:
+      - name: pk_pedido_id
+        description: Identificador único do pedido de venda.
+        data_tests:
+          - unique
+          - not_null
+      - name: pk_data_pedido
+        description: Chave da dimensão de data referente à data do pedido.
+      - name: fk_cliente_id
+        description: Identificador do cliente associado ao pedido.
+      - name: fk_territorio_id
+        description: Identificador do território de vendas associado ao pedido.
+      - name: fk_pagamento_id
+        description: Identificador da forma de pagamento utilizada no pedido.
+      - name: fk_endereco_cobranca_id
+        description: Identificador do endereço de cobrança associado ao pedido.
+      - name: fk_endereco_entrega_id
+        description: Identificador do endereço de entrega associado ao pedido.
+      - name: fk_metodo_envio_id
+        description: Identificador do método de envio utilizado no pedido.
+      - name: fk_status_pedido_id
+        description: Identificador do status atual do pedido.
+      - name: fk_vendedor_id
+        description: Identificador do vendedor responsável pelo pedido.
+      - name: data_pedido
+        description: Data em que o pedido foi realizado.
+      - name: valor_frete
+        description: Valor do frete associado ao pedido.
+      - name: valor_imposto
+        description: Valor de impostos associados ao pedido.
+      - name: valor_total
+        description: Valor total do pedido considerando produtos, frete e impostos.
+      - name: data_modificacao
+        description: Data da última modificação do registro na origem.
+      - name: data_escrita_elt
+        description: Data e hora de geração do registro durante o processo ELT.
+

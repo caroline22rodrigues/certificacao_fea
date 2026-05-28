@@ -13,4 +13,5 @@ select
     , ano_expiracao
     , ano_mes_expiracao
     , data_modificacao
+    , current_timestamp() as data_escrita_elt
 from cartao

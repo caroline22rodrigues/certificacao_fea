@@ -11,4 +11,5 @@ select
     --, classificacao_credito
     --, fornecedor_preferencial
     , ativo
+    , current_timestamp() as data_escrita_elt
 from fornecedor

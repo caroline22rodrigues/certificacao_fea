@@ -19,6 +19,7 @@ select
     , estado.codigo_estado_provincia
     , pais.nome_pais_regiao
     , pais.codigo_pais_regiao
+    , current_timestamp() as data_escrita_elt
 from endereco
 left join estado on endereco.fk_estado_provincia_id = estado.pk_estado_provincia_id
 left join pais on estado.codigo_pais_regiao = pais.codigo_pais_regiao

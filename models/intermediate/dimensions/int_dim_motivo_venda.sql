@@ -11,5 +11,5 @@ select
     , nome_motivo_venda
     , tipo_motivo_venda
     , data_modificacao
-
+    , current_timestamp() as data_escrita_elt
 from motivo_venda

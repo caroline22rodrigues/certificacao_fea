@@ -9,3 +9,5 @@ models:
               - not_null
       - name: nome_status_pedido
         description: Descrição textual do status do pedido.
+      - name: data_escrita_elt
+        description: Data de controle para auditoria, indica o momento em que a linha foi gerada na tabela.
