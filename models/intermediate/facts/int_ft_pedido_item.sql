@@ -17,6 +17,12 @@ select
     , pedido.fk_cliente_id
     , pedido.fk_territorio_id
     , item.fk_produto_id
+    , pedido.fk_pagamento_id
+    , pedido.fk_endereco_cobranca_id
+    , pedido.fk_endereco_entrega_id
+    , pedido.fk_metodo_envio_id
+    , pedido.fk_status_pedido_id
+    , pedido.fk_vendedor_id
     , pedido.data_pedido
     , item.quantidade_pedida
     , item.preco_unitario
