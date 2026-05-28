@@ -1,16 +1,29 @@
+
 with pedido as (
     select *
     from {{ ref('stg_sales_salesorderheader') }}
 )
-, tempo as (
+, item as (
     select *
-    from {{ ref('int_dim_tempo') }}
-
+    from {{ ref('stg_sales_salesorderdetail') }}
 )
+, metricas_item as (
+    select
+        pk_pedido_id
+        , sum(quantidade_pedida * preco_unitario) as valor_bruto_pedido
+        , sum(
+            quantidade_pedida
+            * preco_unitario
+            * (1 - desconto_preco_unitario)
+        ) as valor_liquido_pedido
+        , sum(quantidade_pedida) as quantidade_itens
+        , count(distinct fk_produto_id) as quantidade_produtos
+    from item
+    group by 1
+)
+
 select
     pedido.pk_pedido_id
-    -- dimensões
-    , tempo.pk_data as pk_data_pedido
     , pedido.fk_cliente_id
     , pedido.fk_territorio_id
     , pedido.fk_pagamento_id
@@ -19,15 +32,19 @@ select
     , pedido.fk_metodo_envio_id
     , pedido.fk_status_pedido_id
     , pedido.fk_vendedor_id
-    -- datas
-    , pedido.data_pedido
-    -- métricas do pedido
+    , replace(pedido.data_pedido, '-', '') pk_data_pedido 
+    -- métricas agregadas
+    , metricas_item.valor_bruto_pedido
+    , metricas_item.valor_liquido_pedido
+    , metricas_item.quantidade_itens
+    , metricas_item.quantidade_produtos
+    -- header
     , pedido.valor_frete
     , pedido.valor_imposto
     , pedido.valor_total
     -- auditoria
-    , pedido.data_modificacao
     , current_timestamp() as data_escrita_elt
 from pedido
-left join tempo  on tempo.data = pedido.data_pedido
+left join metricas_item
+    on pedido.pk_pedido_id = metricas_item.pk_pedido_id
 

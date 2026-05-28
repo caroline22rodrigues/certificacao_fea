@@ -1,6 +1,6 @@
 
 models:
-  - name: int_ft_pedido
+  - name: ft_pedido
     description: Fato contendo informações consolidadas dos pedidos de venda no nível do pedido.
     columns:
       - name: pk_pedido_id
@@ -34,6 +34,8 @@ models:
         description: Valor de impostos associados ao pedido.
       - name: valor_total
         description: Valor total do pedido considerando produtos, frete e impostos.
+      - name: data_modificacao
+        description: Data da última modificação do registro na origem.
       - name: data_escrita_elt
         description: Data e hora de geração do registro durante o processo ELT.
 
