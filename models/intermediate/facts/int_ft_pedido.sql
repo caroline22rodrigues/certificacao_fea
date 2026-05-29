@@ -25,13 +25,10 @@ with pedido as (
 select
     pedido.pk_pedido_id
     , pedido.fk_cliente_id
-    , pedido.fk_territorio_id
-    , pedido.fk_pagamento_id
     , pedido.fk_endereco_cobranca_id
     , pedido.fk_endereco_entrega_id
     , pedido.fk_metodo_envio_id
     , pedido.fk_status_pedido_id
-    , pedido.fk_vendedor_id
     , replace(pedido.data_pedido, '-', '') pk_data_pedido 
     -- métricas agregadas
     , metricas_item.valor_bruto_pedido
