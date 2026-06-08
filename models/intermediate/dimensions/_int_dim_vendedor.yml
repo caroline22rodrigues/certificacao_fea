@@ -1,0 +1,25 @@
+models:
+  - name: int_dim_vendedor
+    description: Tabela intermediária contendo os dados enriquecidos dos vendedores.
+    columns:
+      - name: pk_vendedor_id
+        description: Identificador único do vendedor.
+        data_tests:
+          - unique
+          - not_null
+      - name: nome_completo
+        description: Nome completo do vendedor.
+      - name: fk_territorio_id
+        description: Identificador do território associado ao vendedor.
+      - name: meta_vendas
+        description: Meta de vendas atribuída ao vendedor.
+      - name: valor_bonus
+        description: Valor de bônus atribuído ao vendedor.
+      - name: percentual_comissao
+        description: Percentual de comissão do vendedor.
+      - name: valor_vendas_ano_atual
+        description: Valor acumulado de vendas no ano atual.
+      - name: valor_vendas_ano_anterior
+        description: Valor acumulado de vendas no ano anterior.
+      - name: data_modificacao
+        description: Data da última modificação do registro.

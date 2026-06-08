@@ -1,0 +1,13 @@
+models:
+  - name: dim_pagamento
+    description: Tabela intermediaria contendo os cartões de crédito utilizados nos pedidos de venda.
+    columns:
+      - name: pk_pagamento_id
+        description: Identificador único do cartão de crédito.
+        data_tests:
+          - unique
+          - not_null
+      - name: tipo_cartao
+        description: Tipo do cartão de crédito.
+      - name: data_modificacao
+        description: Data da última modificação do registro.
