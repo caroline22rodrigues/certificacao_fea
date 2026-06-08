@@ -61,126 +61,107 @@ models/
     <img width="900" alt="image" src="https://github.com/user-attachments/assets/6b1094a1-808c-42e0-a2fa-301fe8de700d" />
 </p>
 
-### SOURCES
+## Sources
 
-* SALES
-├── stg_sales_customer
-├── stg_sales_creditcard
-├── stg_sales_store
-├── stg_sales_salesperson
-├── stg_sales_salesterritory
-├── stg_sales_salesreason
-├── stg_sales_salesorderheader
-├── stg_sales_salesorderdetail
-└── stg_sales_salesorderheadersalesreason
+### Sales
+- stg_sales_customer
+- stg_sales_creditcard
+- stg_sales_store
+- stg_sales_salesperson
+- stg_sales_salesterritory
+- stg_sales_salesreason
+- stg_sales_salesorderheader
+- stg_sales_salesorderdetail
+- stg_sales_salesorderheadersalesreason
 
-* PERSON
-├── stg_person_person
-├── stg_person_address
-├── stg_person_stateprovince
-└── stg_person_countryregion
+### Person
+- stg_person_person
+- stg_person_address
+- stg_person_stateprovince
+- stg_person_countryregion
 
-* PRODUCTION
-├── stg_production_product
-├── stg_production_productsubcategory
-└── stg_production_productcategory
+### Production
+- stg_production_product
+- stg_production_productsubcategory
+- stg_production_productcategory
 
-* PURCHASING
-└── stg_purchasing_shipmethod
+### Purchasing
+- stg_purchasing_shipmethod
 
+---
 
-### DIMENSÕES
+## Dimensões
 
-* dim_cliente
-├── stg_sales_customer
-└── stg_person_person
+| Dimensão | Tabelas de Origem |
+|-----------|------------------|
+| dim_cliente | stg_sales_customer, stg_person_person |
+| dim_produto | stg_production_product, stg_production_productsubcategory, stg_production_productcategory |
+| dim_endereco | stg_person_address, stg_person_stateprovince, stg_person_countryregion |
+| dim_loja | stg_sales_store, stg_sales_salesterritory |
+| dim_vendedor | stg_sales_salesperson, stg_person_person, stg_sales_salesterritory |
+| dim_pagamento | stg_sales_creditcard |
+| dim_status_pedido | stg_sales_salesorderheader |
+| dim_motivo_venda | stg_sales_salesreason |
+| dim_tempo | Calendário gerado via dbt |
 
-* dim_produto
-├── stg_production_product
-├── stg_production_productsubcategory
-└── stg_production_productcategory
+---
 
-* dim_endereco
-├── stg_person_address
-├── stg_person_stateprovince
-└── stg_person_countryregion
+## Fatos
 
-* dim_loja
-├── stg_sales_store
-└── stg_sales_salesterritory
+### ft_pedido
 
-* dim_vendedor
-├── stg_sales_salesperson
-├── stg_person_person
-└── stg_sales_salesterritory
+**Origem**
+- stg_sales_salesorderheader
 
-* dim_pagamento
-└── stg_sales_creditcard
+**Dimensões utilizadas**
+- dim_cliente
+- dim_loja
+- dim_vendedor
+- dim_pagamento
+- dim_status_pedido
+- dim_endereco
+- dim_tempo
 
-* dim_status_pedido
-└── stg_sales_salesorderheader
+**Granularidade**
+- 1 linha = 1 pedido
 
-* dim_motivo_venda
-└── stg_sales_salesreason
+---
 
-* dim_tempo
-└── Calendário gerado via dbt
+### ft_pedido_item
 
+**Origem**
+- stg_sales_salesorderdetail
+- stg_sales_salesorderheader
 
-### FATOS
+**Dimensões utilizadas**
+- dim_produto
+- dim_cliente
+- dim_loja
+- dim_vendedor
+- dim_pagamento
+- dim_status_pedido
+- dim_endereco
+- dim_tempo
 
-* ft_pedido
+**Granularidade**
+- 1 linha = 1 item do pedido
 
-Origem:
-├── stg_sales_salesorderheader
+---
 
-Dimensões utilizadas:
-├── dim_cliente
-├── dim_loja
-├── dim_vendedor
-├── dim_pagamento
-├── dim_status_pedido
-├── dim_endereco
-└── dim_tempo
+## Bridge
 
-Granularidade:
-1 linha = 1 pedido
+### brg_motivo_venda
 
+**Origem**
+- stg_sales_salesorderheadersalesreason
+- dim_motivo_venda
 
-* ft_pedido_item
+**Relaciona**
+- ft_pedido
+- dim_motivo_venda
 
-Origem:
-├── stg_sales_salesorderdetail
-└── stg_sales_salesorderheader
-
-Dimensões utilizadas:
-├── dim_produto
-├── dim_cliente
-├── dim_loja
-├── dim_vendedor
-├── dim_pagamento
-├── dim_status_pedido
-├── dim_endereco
-└── dim_tempo
-
-Granularidade:
-1 linha = 1 item do pedido
-
-
-### BRIDGE
-
-* brg_motivo_venda
-
-Origem:
-├── stg_sales_salesorderheadersalesreason
-└── dim_motivo_venda
-
-Relaciona:
-├── ft_pedido
-└── dim_motivo_venda
-
-Granularidade:
-1 linha = 1 motivo associado a 1 pedido
+**Granularidade**
+- 1 linha = 1 motivo associado a 1 pedido
 
 ---
 
