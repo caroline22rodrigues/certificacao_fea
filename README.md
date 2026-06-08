@@ -63,32 +63,14 @@ models/
 
 ## Sources
 
-### Sales
-- stg_sales_customer
-- stg_sales_creditcard
-- stg_sales_store
-- stg_sales_salesperson
-- stg_sales_salesterritory
-- stg_sales_salesreason
-- stg_sales_salesorderheader
-- stg_sales_salesorderdetail
-- stg_sales_salesorderheadersalesreason
+| Domínio | Tabelas |
+|----------|----------|
+| Sales | stg_sales_customer, stg_sales_creditcard, stg_sales_store, stg_sales_salesperson, stg_sales_salesterritory, stg_sales_salesreason, stg_sales_salesorderheader, stg_sales_salesorderdetail, stg_sales_salesorderheadersalesreason |
+| Person | stg_person_person, stg_person_address, stg_person_stateprovince, stg_person_countryregion |
+| Production | stg_production_product, stg_production_productsubcategory, stg_production_productcategory |
+| Purchasing | stg_purchasing_shipmethod |
 
-### Person
-- stg_person_person
-- stg_person_address
-- stg_person_stateprovince
-- stg_person_countryregion
 
-### Production
-- stg_production_product
-- stg_production_productsubcategory
-- stg_production_productcategory
-
-### Purchasing
-- stg_purchasing_shipmethod
-
----
 
 ## Dimensões
 
@@ -104,64 +86,22 @@ models/
 | dim_motivo_venda | stg_sales_salesreason |
 | dim_tempo | Calendário gerado via dbt |
 
----
 
-## Fatos
-
-### ft_pedido
-
-**Origem**
-- stg_sales_salesorderheader
-
-**Dimensões utilizadas**
-- dim_cliente
-- dim_loja
-- dim_vendedor
-- dim_pagamento
-- dim_status_pedido
-- dim_endereco
-- dim_tempo
-
-**Granularidade**
-- 1 linha = 1 pedido
-
----
-
-### ft_pedido_item
-
-**Origem**
-- stg_sales_salesorderdetail
-- stg_sales_salesorderheader
-
-**Dimensões utilizadas**
-- dim_produto
-- dim_cliente
-- dim_loja
-- dim_vendedor
-- dim_pagamento
-- dim_status_pedido
-- dim_endereco
-- dim_tempo
-
-**Granularidade**
-- 1 linha = 1 item do pedido
-
----
 
 ## Bridge
 
-### brg_motivo_venda
+| Bridge | Origem | Relaciona | Granularidade |
+|----------|---------|------------|---------------|
+| brg_motivo_venda | stg_sales_salesorderheadersalesreason, dim_motivo_venda | ft_pedido ↔ dim_motivo_venda | 1 linha = 1 motivo associado a 1 pedido |
 
-**Origem**
-- stg_sales_salesorderheadersalesreason
-- dim_motivo_venda
 
-**Relaciona**
-- ft_pedido
-- dim_motivo_venda
 
-**Granularidade**
-- 1 linha = 1 motivo associado a 1 pedido
+## Fatos
+
+| Fato | Origem | Dimensões Utilizadas | Granularidade |
+|--------|---------|---------------------|---------------|
+| ft_pedido | stg_sales_salesorderheader | dim_cliente, dim_loja, dim_vendedor, dim_pagamento, dim_status_pedido, dim_endereco, dim_tempo | 1 linha = 1 pedido |
+| ft_pedido_item | stg_sales_salesorderdetail, stg_sales_salesorderheader | dim_produto, dim_cliente, dim_loja, dim_vendedor, dim_pagamento, dim_status_pedido, dim_endereco, dim_tempo | 1 linha = 1 item do pedido |
 
 ---
 
