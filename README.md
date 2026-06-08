@@ -57,9 +57,9 @@ models/
 ---
 
 ## Modelo Dimensional
-
-<img width="391" height="289" alt="image" src="https://github.com/user-attachments/assets/6b1094a1-808c-42e0-a2fa-301fe8de700d" />
-
+<p align="center">
+    <img width="900" alt="image" src="https://github.com/user-attachments/assets/6b1094a1-808c-42e0-a2fa-301fe8de700d" />
+</p>
 
 ### Dimensões
 
