@@ -1,18 +1,24 @@
+version: 2
+
 sources:
   - name: sales
-    description: Esse schema armazena os dados transacionais relacionados às vendas, clientes, pedidos comerciais e territórios de venda do Adventure Works.
+    description: Esse schema armazena os dados transacionais relacionados às vendas.
     catalog: fea_academy
     schema: adventure_works
+
     tables:
       - name: sales_creditcard
-        description: Tabela staging contendo os cartões de crédito utilizados nas transações de venda.
+        description: Tabela de cartões de crédito do Adventure Works.
+
         columns:
-          - name: pk_pagamento_id
-            description: Identificador único do cartão de crédito.
+          - name: creditcardid
+            description: Identificador único do cartão.
             data_tests:
               - unique
               - not_null
-          - name: tipo_cartao
-            description: Tipo do cartão de crédito.
-          - name: data_modificacao
-            description: Data da última modificação do registro.
+
+          - name: cardtype
+            description: Tipo do cartão.
+
+          - name: modifieddate
+            description: Data de modificação.
