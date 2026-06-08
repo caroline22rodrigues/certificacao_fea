@@ -178,15 +178,48 @@ Foram implementados testes de qualidade utilizando dbt:
 
 ## Dashboard Power BI
 
-O dashboard desenvolvido contempla análises de:
+O dashboard desenvolvido contempla guias navegáveis com diversos filtros conforme os prints a seguir:
 
-* Vendas
-* Produtos
-* Clientes
+* Data da venda
+<p align="center">
+    <img width="900" alt="image" src="https://github.com/user-attachments/assets/9e4f6f70-522a-464a-920f-0714551a6e3c" />
+</p>
+
+* Produto
+<p align="center">
+    <img width="900" alt="image" src="https://github.com/user-attachments/assets/64d21bbe-0fbc-49e4-bdee-44b225953696" />
+</p>
+
+* Cartão
+<p align="center">
+    <img width="900" alt="image" src="https://github.com/user-attachments/assets/2f24dcf7-a1b7-4579-8bf6-ded135ec9ac4" />
+</p>
+
 * Motivos de Venda
-* Cartões de Crédito
-* Localidades
+<p align="center">
+    <img width="900" alt="image" src="https://github.com/user-attachments/assets/7f550b36-9016-4940-909c-fe438051b640" />
+</p>
 
+* Cliente
+<p align="center">
+    <img width="900" alt="image" src="https://github.com/user-attachments/assets/f97a88f4-53f3-46f9-aae2-2d880ee031a0" />
+</p>
+
+* Localidades
+<p align="center">
+    <img width="900" alt="image" src="https://github.com/user-attachments/assets/6a5b6bf8-82fe-420c-af09-e0956f3817b6" />
+</p>
+
+* Vendedor
+<p align="center">
+  <img width="900" alt="image" src="https://github.com/user-attachments/assets/f0eb484d-6edb-48af-94e9-a87250cb151e" />
+</p>
+
+* Guia de filtros
+<p align="center">
+    <img width="900" alt="image" src="https://github.com/user-attachments/assets/256b6dc2-d9b6-4c7c-952e-cb5b1e03febb" />
+</p>
+  
 ---
 
 ## Tecnologias Utilizadas
