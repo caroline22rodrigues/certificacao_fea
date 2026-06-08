@@ -111,7 +111,6 @@ Foram implementados testes de qualidade utilizando dbt:
 
 * Unique
 * Not Null
-* Testes de regras de negócio
 * Testes customizados utilizando macros
 
 ---
