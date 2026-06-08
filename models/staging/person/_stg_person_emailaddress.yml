@@ -11,6 +11,9 @@ sources:
         columns:
           - name: businessentityid
             description: Identificador da entidade de negócio associada ao e-mail.
+            data_tests:
+              - unique
+              - not_null
           - name: emailaddressid
             description: Identificador único do e-mail.
           - name: emailaddress

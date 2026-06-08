@@ -11,5 +11,6 @@ select
     , pedido_motivo_venda.fk_motivo_venda_id
     , motivo_venda.nome_motivo_venda
     , motivo_venda.tipo_motivo_venda
+    , current_timestamp() as data_escrita_elt
 from pedido_motivo_venda
 left join motivo_venda on pedido_motivo_venda.fk_motivo_venda_id = motivo_venda.pk_motivo_venda_id

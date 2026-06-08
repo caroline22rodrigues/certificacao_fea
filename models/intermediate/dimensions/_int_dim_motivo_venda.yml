@@ -5,9 +5,14 @@ models:
     columns:
       - name: pk_motivo_venda_id
         description: Identificador único do motivo da venda.
+        data_tests:
+              - unique
+              - not_null
       - name: nome_motivo_venda
         description: Nome do motivo da venda.
       - name: tipo_motivo_venda
         description: Categoria do motivo da venda.
       - name: data_modificacao
         description: Data da última modificação do registro.
+      - name: data_escrita_elt
+        description: Data de controle para auditoria, indica o momento em que a linha foi gerada na tabela.

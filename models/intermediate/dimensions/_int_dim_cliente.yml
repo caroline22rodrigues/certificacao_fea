@@ -5,9 +5,14 @@ models:
       columns:
         - name: pk_cliente_id
           description: Identificador único do cliente.
+          data_tests:
+              - unique
+              - not_null
         - name: nome_completo
           description: Nome completo da pessoa associada ao cliente.
         - name: tipo_pessoa
           description: Tipo da entidade cadastrada no sistema.
         - name: promocao_email
           description: Indicador de participação em campanhas promocionais por e-mail. 
+        - name: data_escrita_elt
+          description: Data de controle para auditoria, indica o momento em que a linha foi gerada na tabela.

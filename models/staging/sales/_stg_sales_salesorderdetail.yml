@@ -10,8 +10,13 @@ sources:
         columns:
           - name: salesorderid
             description: Identificador do pedido de venda.
+            data_tests:
+              - not_null
           - name: salesorderdetailid
             description: Identificador único do item do pedido.
+            data_tests:
+              - unique
+              - not_null
           - name: carriertrackingnumber
             description: Código de rastreio da transportadora.
           - name: orderqty

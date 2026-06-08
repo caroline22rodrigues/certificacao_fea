@@ -20,6 +20,7 @@ select
     , produto.data_inicio_venda
     , subcategoria.nome_subcategoria_produto
     , categoria.nome_categoria_produto
+    , current_timestamp() as data_escrita_elt
 from produto
 left join subcategoria on produto.fk_subcategoria_produto_id = subcategoria.pk_subcategoria_produto_id
 left join categoria on subcategoria.fk_categoria_produto_id = categoria.pk_categoria_produto_id

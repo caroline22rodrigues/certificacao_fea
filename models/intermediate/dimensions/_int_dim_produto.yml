@@ -5,6 +5,9 @@ models:
     columns:
       - name: pk_produto_id
         description: Identificador único do produto.
+        data_tests:
+              - unique
+              - not_null
       - name: nome_produto
         description: Nome do produto.
       - name: preco_lista
@@ -21,3 +24,5 @@ models:
         description: Nome da subcategoria do produto.
       - name: nome_categoria_produto
         description: Nome da categoria principal do produto.
+      - name: data_escrita_elt
+        description: Data de controle para auditoria, indica o momento em que a linha foi gerada na tabela.

@@ -5,6 +5,9 @@ models:
     columns:
       - name: pk_data
         description: Identificador único da data.
+        data_tests:
+              - unique
+              - not_null
       - name: data
         description: Data no formato dd-mm-aaaa.
       - name: dia
@@ -17,3 +20,5 @@ models:
         description: Exibe o número relacionado ao dia da semana.
       - name: is_final_de_semana
         description: Exibe true quandop for final de semana e false quando não for. 
+      - name: data_escrita_elt
+        description: Data de controle para auditoria, indica o momento em que a linha foi gerada na tabela.

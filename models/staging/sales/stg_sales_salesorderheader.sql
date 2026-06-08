@@ -17,6 +17,7 @@ with
             , cast(status as int) as fk_status_pedido_id
             -- , cast(creditcardapprovalcode as string) as codigo_aprovacao_cartao
             -- , cast(currencyrateid as int) as fk_taxa_cambio_id
+            , cast(orderdate as date) as data_pedido
             , cast(subtotal as decimal(18,2)) as valor_subtotal
             , cast(taxamt as decimal(18,2)) as valor_imposto
             , cast(freight as decimal(18,2)) as valor_frete

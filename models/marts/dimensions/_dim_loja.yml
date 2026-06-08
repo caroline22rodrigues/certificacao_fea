@@ -1,0 +1,24 @@
+
+models:
+  - name: dim_loja
+    description: Tabela intermediária contendo os dados enriquecidos das lojas e seus respectivos vendedores e territórios.
+    columns:
+      - name: pk_loja_id
+        description: Identificador único da loja.
+        data_tests:
+          - unique
+          - not_null
+      - name: nome_loja
+        description: Nome da loja.
+      - name: fk_vendedor_id
+        description: Identificador do vendedor responsável pela loja.
+      - name: nome_vendedor
+        description: Nome completo do vendedor responsável pela loja.
+      - name: nome_territorio
+        description: Nome do território associado ao vendedor.
+      - name: grupo_territorio
+        description: Grupo geográfico do território.
+      - name: codigo_pais_regiao
+        description: Código do país ou região associado ao território.
+      - name: data_modificacao
+        description: Data da última modificação do registro.

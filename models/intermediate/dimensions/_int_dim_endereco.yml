@@ -4,6 +4,9 @@ models:
     columns:
       - name: pk_endereco_id
         description: Identificador único do endereço.
+        data_tests:
+              - unique
+              - not_null
       - name: endereco_linha_1
         description: Primeira linha do endereço.
       - name: cidade
@@ -18,3 +21,5 @@ models:
         description: Nome do país ou região.
       - name: codigo_pais_regiao
         description: Código do país ou região.
+      - name: data_escrita_elt
+        description: Data de controle para auditoria, indica o momento em que a linha foi gerada na tabela.

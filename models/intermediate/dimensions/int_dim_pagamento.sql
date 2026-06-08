@@ -1,4 +1,4 @@
-with cartao as (
+with pagamento as (
 
     select *
     from {{ ref('stg_sales_creditcard') }}
@@ -6,11 +6,7 @@ with cartao as (
 )
 
 select
-    pk_cartao_credito_id as pk_pagamento_id
-    , 'Cartão de crédito' as tipo_pagamento
+    pk_pagamento_id
     , tipo_cartao
-    , mes_expiracao
-    , ano_expiracao
-    , ano_mes_expiracao
     , data_modificacao
-from cartao
+from pagamento

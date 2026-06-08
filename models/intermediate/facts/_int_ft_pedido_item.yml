@@ -1,31 +1,69 @@
+version: 2
 
 models:
   - name: int_ft_pedido_item
-    description: Fato contendo os itens dos pedidos de venda e métricas financeiras associadas.
+    description: Fato no nível de item do pedido contendo métricas de venda por produto.
+
     columns:
-      - name: pk_pedido_id
-        description: Identificador único do pedido de venda.
       - name: pk_pedido_item_id
         description: Identificador único do item do pedido.
+        data_tests:
+          - unique
+          - not_null
+
+      - name: pk_pedido_id
+        description: Identificador do pedido associado ao item.
+
+      - name: pk_data_pedido
+        description: Chave da dimensão de tempo referente à data do pedido.
+
       - name: fk_cliente_id
         description: Identificador do cliente associado ao pedido.
+
+      - name: fk_loja_id
+        description: Identificador da loja associada ao cliente.
+
+      - name: fk_vendedor_id
+        description: Identificador do vendedor responsável pelo pedido.
+
+      - name: fk_pagamento_id
+        description: Identificador do cartão de crédito utilizado no pedido.
+
       - name: fk_territorio_id
-        description: Identificador do território de vendas.
+        description: Identificador do território de vendas associado ao pedido.
+
+      - name: fk_status_pedido_id
+        description: Identificador do status do pedido.
+
+      - name: fk_endereco_entrega_id
+        description: Identificador do endereço de entrega do pedido.
+
+      - name: fk_endereco_cobranca_id
+        description: Identificador do endereço de cobrança do pedido.
+
       - name: fk_produto_id
         description: Identificador do produto vendido.
+
       - name: quantidade_pedida
-        description: Quantidade de itens solicitados no pedido.
+        description: Quantidade vendida do produto.
+
       - name: preco_unitario
-        description: Valor unitário do produto vendido.
+        description: Preço unitário do produto no momento da venda.
+
       - name: desconto_preco_unitario
         description: Percentual de desconto aplicado ao item.
+
       - name: valor_bruto
-        description: Valor bruto calculado sem desconto.
+        description: Valor bruto do item antes dos descontos.
+
       - name: valor_liquido
-        description: Valor líquido calculado após desconto.
+        description: Valor líquido do item após aplicação dos descontos.
+
       - name: valor_frete
-        description: Valor do frete associado ao pedido.
+        description: Valor de frete rateado do pedido.
+
       - name: valor_imposto
-        description: Valor de impostos associados ao pedido.
+        description: Valor de imposto associado ao pedido.
+
       - name: data_modificacao
         description: Data da última modificação do registro.

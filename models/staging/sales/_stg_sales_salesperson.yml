@@ -1,0 +1,38 @@
+version: 2
+
+sources:
+  - name: sales
+    description: Dados de vendedores do Adventure Works.
+    catalog: fea_academy
+    schema: adventure_works
+
+    tables:
+      - name: sales_salesperson
+
+        columns:
+          - name: businessentityid
+            description: Identificador único do vendedor.
+            data_tests:
+              - unique
+              - not_null
+
+          - name: territoryid
+            description: Identificador do território associado ao vendedor.
+
+          - name: salesquota
+            description: Meta de vendas atribuída ao vendedor.
+
+          - name: bonus
+            description: Valor de bônus atribuído ao vendedor.
+
+          - name: commissionpct
+            description: Percentual de comissão do vendedor.
+
+          - name: salesytd
+            description: Valor acumulado de vendas no ano atual.
+
+          - name: saleslastyear
+            description: Valor acumulado de vendas no ano anterior.
+
+          - name: modifieddate
+            description: Data da última modificação do registro.

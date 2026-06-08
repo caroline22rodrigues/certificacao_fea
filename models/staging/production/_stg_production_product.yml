@@ -10,6 +10,9 @@ sources:
         columns:
           - name: productid
             description: Identificador único do produto.
+            data_tests:
+              - unique
+              - not_null
           - name: listprice
             description: Preço de lista do produto.
           - name: name

@@ -11,5 +11,6 @@ select
     , pessoa.nome_completo
     , pessoa.tipo_pessoa
     , pessoa.promocao_email
+    , current_timestamp() as data_escrita_elt
 from cliente
 left join pessoa on cliente.fk_pessoa_id = pessoa.pk_entidade_negocio_id

@@ -13,4 +13,5 @@ select distinct
         when 5 then 'Enviado'
         when 6 then 'Cancelado'
       end as nome_status_pedido
+    , current_timestamp() as data_escrita_elt
 from pedido

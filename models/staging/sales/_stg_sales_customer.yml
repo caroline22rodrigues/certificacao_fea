@@ -11,6 +11,9 @@ sources:
         columns:
           - name: customerid
             description: Identificador único do cliente.
+            data_tests:
+              - unique
+              - not_null
           - name: personid
             description: Identificador da pessoa física associada ao cliente.
           - name: storeid
