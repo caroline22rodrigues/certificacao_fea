@@ -68,8 +68,9 @@ tests/
 
 ## Modelo Dimensional
 <p align="center">
-    <img width="900" alt="fea_modelo_logico-Página-2 drawio" src="https://github.com/user-attachments/assets/5c09a226-37e7-4112-b40f-2b06d5ffadd4" />
+    <img width="801" alt="fea_modelo_logico-Página-2 drawio (1)" src="https://github.com/user-attachments/assets/751a162c-7813-456f-9ee3-9c1ac1bb61fc" />
 </p>
+
 
 ## Sources
 
