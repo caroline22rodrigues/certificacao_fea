@@ -17,6 +17,7 @@ Este projeto tem como objetivo construir uma solução analítica completa utili
 
 ```text
 analyses/
+│
 macro/
 ├── tests/
 models/
@@ -35,8 +36,11 @@ models/
     ├── dimensions/
     ├── facts/
     └── bridges/
+│
 seeds/
+│
 snapshots/
+│
 tests/
 ```
 
