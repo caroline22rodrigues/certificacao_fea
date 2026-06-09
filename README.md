@@ -8,10 +8,8 @@ Este projeto tem como objetivo construir uma solução analítica completa utili
 
 ## Arquitetura da Solução
 
-Fonte de Dados (AdventureWorks)
-→ Databricks (Data Warehouse)
-→ dbt Cloud (Transformações)
-→ Power BI (Visualização)
+<img width="547" height="102" alt="Diagrama sem nome-Página-2 drawio" src="https://github.com/user-attachments/assets/710910aa-e201-48a8-8373-1a6e0cb0b7f3" />
+
 
 ---
 
