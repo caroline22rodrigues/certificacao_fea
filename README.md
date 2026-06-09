@@ -37,6 +37,8 @@ models/
     ├── facts/
     └── bridges/
 │
+powerbi
+│
 seeds/
 │
 snapshots/
