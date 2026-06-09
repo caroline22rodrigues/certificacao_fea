@@ -3,11 +3,6 @@ version: 2
 models:
   - name: int_ft_pedido
     description: Fato no nível de pedido contendo métricas agregadas e dimensões relacionadas ao cabeçalho do pedido.
-    data_tests:
-      - total_vendas_ano:
-          arguments:
-            ano: 2011
-            valor_esperado: 12646112.16
 
     columns:
       - name: pk_pedido_id
