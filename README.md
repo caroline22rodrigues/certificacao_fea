@@ -156,8 +156,9 @@ O dashboard desenvolvido contempla guias navegáveis com diversos filtros confor
 
 * Localidades
 <p align="center">
-    <img width="900" alt="image" src="https://github.com/user-attachments/assets/6a5b6bf8-82fe-420c-af09-e0956f3817b6" />
+    <img width="900" alt="image" src="https://github.com/user-attachments/assets/58deec53-dd14-4e48-bc35-7e9a240d3a8e" />
 </p>
+
 
 * Vendedor
 <p align="center">
