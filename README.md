@@ -16,6 +16,9 @@ Este projeto tem como objetivo construir uma solução analítica completa utili
 ## Estrutura do Projeto
 
 ```text
+analyses/
+macro/
+├── tests/
 models/
 ├── staging/
 │   ├── sales/
@@ -32,6 +35,9 @@ models/
     ├── dimensions/
     ├── facts/
     └── bridges/
+seeds/
+snapshots/
+tests/
 ```
 
 ### Camadas
